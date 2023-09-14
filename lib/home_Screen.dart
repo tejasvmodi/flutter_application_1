@@ -108,26 +108,46 @@ class home_Screen extends StatelessWidget {
         ],
         backgroundColor: Colors.white,
       ),
-      body: Container(
-        child: ListView.builder(
-            itemBuilder: (context, index) => GridTile(
-                  footer: Material(
-                    color: Colors.transparent,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.vertical(bottom: Radius.circular(4)),
+      body: ListView.builder(itemCount:3, itemBuilder : (BuildContext context ,int index) {
+        return Card(
+          
+          child:  Column(
+            children: [
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Ink.image(
+                    image: AssetImage('assets/pexels-errin-casano-2356045.jpg'),
+                    child: InkWell(
+                      onTap: () {
+                      },
                     ),
-                    clipBehavior: Clip.antiAlias,
-                    child: GridTileBar(
-                      backgroundColor: Colors.black45,
-                      title: Text("_GridTitleText(photo.title)"),
-                      subtitle: Text("_GridTitleText(photo.subtitle)"),
-                    ),
+                    height: 240,
+                    fit: BoxFit.cover,
                   ),
-                  child: Image.asset("assets/pexels-errin-casano-2356045.jpg"),
-                ),
-            itemCount: 10),
-      ),
+              Align(alignment: Alignment.topLeft,
+                 child: Text(
+                   '⏰ july 22-5:01 PM  ',
+                   style: TextStyle(color: Colors.black),
+                 ),
+               ), 
+                 Padding(
+                 padding: const EdgeInsets.only(right: 230,bottom: 0,top: 200,left: 9),
+                 child: Text(
+                   'Leaf Problem By default ',
+                   style: TextStyle(color: Colors.white),
+                 ),
+               ), 
+                ],
+              ),
+            
+              Align(alignment: Alignment.bottomLeft, child: Text('this is a card with an image  and text',style: TextStyle(color: Colors.black),),)
+                  
+     
+          
+          ]),
+        );
+      } ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
@@ -141,6 +161,7 @@ class home_Screen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.green,
+        
         foregroundColor: Colors.white,
         elevation: 12,
         mini: true,
