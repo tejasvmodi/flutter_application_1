@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_application_1/LoginScreen.dart';
 import 'package:flutter_application_1/SplashScreen.dart';
-import 'package:flutter_application_1/signup.dart';
+import 'package:flutter_application_1/home_Screen.dart';
+//import 'package:flutter_application_1/signup.dart';
+import 'package:flutter_application_1/NotificationView.dart';
+import 'package:flutter_application_1/BottomNavigation.dart';
 
 
 void main() {
@@ -25,7 +29,7 @@ class MyApp extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10))
+            borderRadius: BorderRadius.all(Radius.circular(10)),
           )
         ),
         // This is the theme of your application.
@@ -47,7 +51,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Singup(),
+      home: const home_Screen(),
     );
   }
 }
