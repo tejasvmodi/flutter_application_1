@@ -5,6 +5,7 @@ import 'package:flutter_application_1/LoginScreen.dart';
 import 'package:flutter_application_1/SplashScreen.dart';
 import 'package:flutter_application_1/NotificationView.dart';
 import 'package:flutter_application_1/image_upload.dart';
+import 'package:flutter_application_1/signup.dart';
 
 class home_Screen extends StatelessWidget {
   const home_Screen({super.key});
@@ -90,136 +91,133 @@ class home_Screen extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            
-            const SizedBox(
-              height: 20,
-            ),
-            for (int i = 1; i <= 5; i++)
-              TextButton(
-                onPressed: () {
-                //   showSnackkBar(
-                //       message: 'Tapped $i', icon: const Icon(Icons.touch_app));
-                },
-                child: Card(
-                  elevation: 2,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: MediaQuery.sizeOf(context).width,
-                        height: 250,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              'assets/newlake2.jpg',
-                            ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+         
+          for (int i = 1; i <= 10; i++)
+            TextButton(
+              onPressed: () {
+              //   showSnackkBar(
+              //       message: 'Tapped $i', icon: const Icon(Icons.touch_app));
+              },
+              child: Card(
+                elevation: 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: MediaQuery.sizeOf(context).width,
+                      height: 250,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            'assets/123.jpg',
                           ),
                         ),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 45,
-                              decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.4)),
-                              child: SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    TextButton.icon(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.watch_later_outlined,
-                                        color: Colors.white,
-                                      ),
-                                      label: const Text(
-                                        "July 22-05:11",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w900,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 30,
-                                    ),
-                                    TextButton.icon(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.location_city,
-                                        color: Colors.white,
-                                      ),
-                                      label: const Text(
-                                        "Ahmedabad - Navrangpura",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w900),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 165,
-                            ),
-                            const SingleChildScrollView(
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 45,
+                            decoration: BoxDecoration(
+                                color: Colors.black.withOpacity(0.4)),
+                            child: SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
-                              child: Text(
-                                "Orange Spots On My Fields",
-                                softWrap: true,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  TextButton.icon(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.watch_later_outlined,
+                                      color: Colors.white,
+                                    ),
+                                    label: const Text(
+                                      "July 22-05:11",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w900,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 30,
+                                  ),
+                                  TextButton.icon(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.location_on_outlined,
+                                      color: Colors.white,
+                                    ),
+                                    label: const Text(
+                                      "Ahmedabad - Navrangpura",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w900),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                          const SizedBox(
+                            height: 165,
+                          ),
+                          const SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Text(
+                              "Orange Spots On My Fields",
+                              softWrap: true,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
+                    ),
 
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            TextButton.icon(
-                              onPressed: () {},
-                              icon: const Icon(Icons.android,
-                                  color: Colors.black87),
-                              label: const Text(
-                                'AI dignose: Bilister rust',
-                                style: TextStyle(color: Colors.black87),
-                              ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          TextButton.icon(
+                            onPressed: () {},
+                            icon: const Icon(Icons.android,
+                                color: Colors.black87),
+                            label: const Text(
+                              'AI dignose: Bilister rust',
+                              style: TextStyle(color: Colors.black87),
                             ),
-                            TextButton.icon(
-                              onPressed: () {},
-                              icon: const Icon(Icons.person_search,
-                                  color: Colors.black87),
-                              label: const Text(
-                                'Expert dignose: Anthranose',
-                                style: TextStyle(color: Colors.black87),
-                              ),
+                          ),
+                          TextButton.icon(
+                            onPressed: () {},
+                            icon: const Icon(Icons.person_search,
+                                color: Colors.black87),
+                            label: const Text(
+                              'Expert dignose: Anthranose',
+                              style: TextStyle(color: Colors.black87),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      // Image.asset('assets/images/home_img_demo.jpg'),
-                    ],
-                  ),
+                    ),
+                    // Image.asset('assets/images/home_img_demo.jpg'),
+                  ],
                 ),
               ),
-            const SizedBox(
-              height: 20,
             ),
-          ],
-        ),
+          const SizedBox(
+            height: 20,
+          ),
+        ],
       ),
+    ),
       bottomNavigationBar: BottomNavigationBar(
         items:  [
           //first bottom navigation button 
@@ -229,9 +227,14 @@ class home_Screen extends StatelessWidget {
             }),label: "Home"),
                      
             //second bottom navigation button         
-             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
+             BottomNavigationBarItem(
+            icon: IconButton( icon: Icon(Icons.person),onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Singup(),),);
+            }),label: "profile"),
         ],
       ),
+
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
