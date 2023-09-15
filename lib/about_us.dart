@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_ui/flutter_chat_ui.dart';
+//import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 
 class About_us extends StatelessWidget {
   const About_us({super.key});
