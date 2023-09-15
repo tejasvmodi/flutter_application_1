@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/LoginScreen.dart';
 import 'package:flutter_application_1/SplashScreen.dart';
 import 'package:flutter_application_1/NotificationView.dart';
+ import 'package:flutter_application_1/about_us.dart';
 import 'package:flutter_application_1/image_upload.dart';
 import 'package:flutter_application_1/signup.dart';
+
 
 class home_Screen extends StatelessWidget {
   const home_Screen({super.key});
@@ -44,14 +46,36 @@ class home_Screen extends StatelessWidget {
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.add_a_photo),
+                leading: const Icon(Icons.person_pin_circle_rounded),
                 title: const Text(
-                  'Page 2',
+                  'Chat with Experts',
                   style: TextStyle(fontSize: 20),
                 ),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const SplashScreen()));
+                      builder: (context) => Home()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.contact_phone),
+                title: const Text(
+                  'Contact Us ',
+                  style: TextStyle(fontSize: 20),
+                ),
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Home()));
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.contact_support),
+                title: const Text(
+                  'About Us',
+                  style: TextStyle(fontSize: 20),
+                ),
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => About_us()));
                 },
               )
             ],
@@ -191,7 +215,7 @@ class home_Screen extends StatelessWidget {
                             icon: const Icon(Icons.android,
                                 color: Colors.black87),
                             label: const Text(
-                              'AI dignose: Bilister rust',
+                              'AI diagnose: Bilister rust',
                               style: TextStyle(color: Colors.black87),
                             ),
                           ),
@@ -200,7 +224,7 @@ class home_Screen extends StatelessWidget {
                             icon: const Icon(Icons.person_search,
                                 color: Colors.black87),
                             label: const Text(
-                              'Expert dignose: Anthranose',
+                              'Expert diagnose: Anthranose',
                               style: TextStyle(color: Colors.black87),
                             ),
                           ),
