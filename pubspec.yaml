@@ -38,6 +38,7 @@ dependencies:
   image_picker: ^1.0.4
   dialogflow_flutter: ^1.0.0
   flutter_chat_ui: ^1.6.9
+  google_maps_flutter: ^2.5.0
 
 dev_dependencies:
   flutter_test:

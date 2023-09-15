@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
               ], begin: Alignment.bottomCenter, end: Alignment.topCenter)),
             ),
           ),
-           Align(
+          Align(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.all(20.0),
                   child: TextField(
-                   decoration: InputDecoration(
+                    decoration: InputDecoration(
                       // hintText: "Email Address",
                       label: Text('Password'),
                       fillColor: Colors.transparent,
@@ -60,96 +60,123 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 const Padding(
-                  padding:EdgeInsets.only(left: 19,right: 18),
+                  padding: EdgeInsets.only(left: 19, right: 18),
                   child: Row(
                     children: [
                       SizedBox(width: 5),
                       Spacer(),
-                      Text('forgot password',style: TextStyle(
-                        color: Colors.grey,
-                      ),),
-                     
-                   
-                  
-                    
-                       ],
+                      Text(
+                        'forgot password',
+                        style: TextStyle(
+                          color: Colors.grey,
                         ),
-                   ),
-                        const SizedBox(height: 20,),
-                        Container(
-                        height: 50,
-                        width: 350,
-                       
-                        child: Center(child: FilledButton(
-                          onPressed: (){},
-                          child: const Text('Login',),
-                        ),
-                          ),
                       ),
-                       const SizedBox(height: 20,),
-                       const Padding(
-                       padding: EdgeInsets.only(left: 19,top: 8,right: 18),
-                       child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                              Text('--------',style: TextStyle(color: Colors.white,fontSize: 30),),
-                              Text('Or Login With',style: TextStyle(color: Colors.white,fontSize: 15),),
-                              Text('--------',style: TextStyle(color: Colors.white,fontSize: 30),),
-                        ],
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 50,
+                  width: 350,
+                  child: Center(
+                    child: FilledButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Login',
                       ),
-                        ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    height: 50,
-                    width: 100,
-                    
-                    decoration: BoxDecoration(
-                      color: const Color(0xff484848),
-                      borderRadius: BorderRadius.circular(5)
                     ),
-                    child: const Icon(Icons.g_mobiledata,color: Colors.white,size: 40,),
                   ),
-                  Container(
-                    height: 50,
-                    width: 100,
-                    
-                    decoration: BoxDecoration(
-                      color: const Color(0xff484848),
-                      borderRadius: BorderRadius.circular(5)
-                    ),
-                    child: const Icon(Icons.apple,color: Colors.white,size: 40,),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 19, top: 8, right: 18),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        '--------',
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
+                      Text(
+                        'Or Login With',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                      Text(
+                        '--------',
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
+                    ],
                   ),
-                  Container(
-                    height: 50,
-                    width: 100,
-                    
-                    decoration: BoxDecoration(
-                      color: const Color(0xff484848),
-                      borderRadius: BorderRadius.circular(5)
-                    ),
-                    child: const Icon(Icons.facebook_outlined,color: Colors.white,size: 40,),
-                  ),
-                  
-                ],
-              ),
-              
-              const Padding(
-                padding: EdgeInsets.only(left: 100.0,top:30),
-                child: Row(
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text("Don't Have an Account?",style: TextStyle(color: Colors.grey,),),
-                      Text("Singup",style: TextStyle(color: Colors.green,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      ),)
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff484848),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: const Icon(
+                        Icons.g_mobiledata,
+                        color: Colors.white,
+                        size: 40,
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff484848),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: const Icon(
+                        Icons.apple,
+                        color: Colors.white,
+                        size: 40,
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff484848),
+                          borderRadius: BorderRadius.circular(5)),
+                      child: const Icon(
+                        Icons.facebook_outlined,
+                        color: Colors.white,
+                        size: 40,
+                      ),
+                    ),
                   ],
                 ),
-              )
+                const Padding(
+                  padding: EdgeInsets.only(left: 100.0, top: 30),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Don't Have an Account?",
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Text(
+                        "Singup",
+                        style: TextStyle(
+                          color: Colors.green,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
-          ) 
+          )
         ],
       ),
     );

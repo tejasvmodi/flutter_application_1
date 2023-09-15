@@ -5,6 +5,7 @@ import 'package:flutter_application_1/LoginScreen.dart';
 import 'package:flutter_application_1/SplashScreen.dart';
 import 'package:flutter_application_1/NotificationView.dart';
  import 'package:flutter_application_1/about_us.dart';
+import 'package:flutter_application_1/contact_us.dart';
 import 'package:flutter_application_1/image_upload.dart';
 import 'package:flutter_application_1/signup.dart';
 
@@ -64,7 +65,7 @@ class home_Screen extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Home()));
+                      builder: (context) => Contact_us()));
                 },
               ),
               ListTile(
