@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/LoginScreen.dart';
 import 'package:flutter_application_1/SplashScreen.dart';
 import 'package:flutter_application_1/NotificationView.dart';
+import 'package:flutter_application_1/image_upload.dart';
 
 class home_Screen extends StatelessWidget {
   const home_Screen({super.key});
@@ -125,14 +126,14 @@ class home_Screen extends StatelessWidget {
                     height: 240,
                     fit: BoxFit.cover,
                   ),
-              Align(alignment: Alignment.topLeft,
+              const Align(alignment: Alignment.topLeft,
                  child: Text(
                    '⏰ july 22-5:01 PM  ',
                    style: TextStyle(color: Colors.black),
                  ),
                ), 
-                 Padding(
-                 padding: const EdgeInsets.only(right: 230,bottom: 0,top: 200,left: 9),
+                 const Padding(
+                 padding: EdgeInsets.only(right: 230,bottom: 0,top: 200,left: 9),
                  child: Text(
                    'Leaf Problem By default ',
                    style: TextStyle(color: Colors.white),
@@ -141,7 +142,7 @@ class home_Screen extends StatelessWidget {
                 ],
               ),
             
-              Align(alignment: Alignment.bottomLeft, child: Text('this is a card with an image  and text',style: TextStyle(color: Colors.black),),)
+              const Align(alignment: Alignment.bottomLeft, child: Text('this is a card with an image  and text',style: TextStyle(color: Colors.black),),)
                   
      
           
@@ -165,8 +166,10 @@ class home_Screen extends StatelessWidget {
         foregroundColor: Colors.white,
         elevation: 12,
         mini: true,
-        child: const Icon(
-          Icons.camera_alt_rounded,
+        child:  IconButton(
+          icon: Icon(Icons.add), onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Home(),));
+          }, 
         ),
       ),
     );
