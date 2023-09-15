@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ChatRoom.dart';
 
 //import 'package:flutter/material.dart';
 import 'package:flutter_application_1/LoginScreen.dart';
@@ -65,7 +66,7 @@ class home_Screen extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Contact_us()));
+                      builder: (context) => ChatRoom(chatRoomId: '1', userMap: {},)));
                 },
               ),
               ListTile(
