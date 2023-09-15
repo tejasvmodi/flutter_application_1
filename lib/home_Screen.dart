@@ -32,14 +32,14 @@ class home_Screen extends StatelessWidget {
                 ),
               ),
               ListTile(
-                leading: const Icon(Icons.home),
+                leading: const Icon(Icons.upload),
                 title: const Text(
-                  'Page 1',
+                  'Image Upload',
                   style: TextStyle(fontSize: 20),
                 ),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const LoginScreen()));
+                      builder: (context) =>  Home()));
                 },
               ),
               ListTile(
@@ -85,77 +85,151 @@ class home_Screen extends StatelessWidget {
                       builder: (context) => const NotificationView()));
             },
           ),
-          // const CircleAvatar(
-          //   radius: 20,
-          //   backgroundColor: Color.fromARGB(255, 166, 182, 167),
-          //   child: Icon(
-          //     Icons.search,
-          //     size: 25,
-          //     color: Colors.black,
-          //   ),
-          // ),
-          // const Padding(
-          //   padding: EdgeInsets.symmetric(horizontal: 10),
-          //   child: CircleAvatar(
-          //     radius: 20,
-          //     backgroundColor: Color.fromARGB(255, 211, 239, 213),
-          //     child: Icon(
-          //       Icons.notifications,
-          //       size: 25,
-          //       color: Colors.black,
-          //     ),
-          //   ),
-          // ),
+          
         ],
         backgroundColor: Colors.white,
       ),
-      body: ListView.builder(itemCount:3, itemBuilder : (BuildContext context ,int index) {
-        return Card(
-          
-          child:  Column(
-            children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Ink.image(
-                    image: AssetImage('assets/pexels-errin-casano-2356045.jpg'),
-                    child: InkWell(
-                      onTap: () {
-                      },
-                    ),
-                    height: 240,
-                    fit: BoxFit.cover,
-                  ),
-              const Align(alignment: Alignment.topLeft,
-                 child: Text(
-                   '⏰ july 22-5:01 PM  ',
-                   style: TextStyle(color: Colors.black),
-                 ),
-               ), 
-                 const Padding(
-                 padding: EdgeInsets.only(right: 230,bottom: 0,top: 200,left: 9),
-                 child: Text(
-                   'Leaf Problem By default ',
-                   style: TextStyle(color: Colors.white),
-                 ),
-               ), 
-                ],
-              ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             
-              const Align(alignment: Alignment.bottomLeft, child: Text('this is a card with an image  and text',style: TextStyle(color: Colors.black),),)
-                  
-     
-          
-          ]),
-        );
-      } ),
+            const SizedBox(
+              height: 20,
+            ),
+            for (int i = 1; i <= 5; i++)
+              TextButton(
+                onPressed: () {
+                //   showSnackkBar(
+                //       message: 'Tapped $i', icon: const Icon(Icons.touch_app));
+                },
+                child: Card(
+                  elevation: 2,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: MediaQuery.sizeOf(context).width,
+                        height: 250,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage(
+                              'assets/newlake2.jpg',
+                            ),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 45,
+                              decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(0.4)),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    TextButton.icon(
+                                      onPressed: () {},
+                                      icon: const Icon(
+                                        Icons.watch_later_outlined,
+                                        color: Colors.white,
+                                      ),
+                                      label: const Text(
+                                        "July 22-05:11",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 30,
+                                    ),
+                                    TextButton.icon(
+                                      onPressed: () {},
+                                      icon: const Icon(
+                                        Icons.location_city,
+                                        color: Colors.white,
+                                      ),
+                                      label: const Text(
+                                        "Ahmedabad - Navrangpura",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w900),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 165,
+                            ),
+                            const SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Text(
+                                "Orange Spots On My Fields",
+                                softWrap: true,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            TextButton.icon(
+                              onPressed: () {},
+                              icon: const Icon(Icons.android,
+                                  color: Colors.black87),
+                              label: const Text(
+                                'AI dignose: Bilister rust',
+                                style: TextStyle(color: Colors.black87),
+                              ),
+                            ),
+                            TextButton.icon(
+                              onPressed: () {},
+                              icon: const Icon(Icons.person_search,
+                                  color: Colors.black87),
+                              label: const Text(
+                                'Expert dignose: Anthranose',
+                                style: TextStyle(color: Colors.black87),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      // Image.asset('assets/images/home_img_demo.jpg'),
+                    ],
+                  ),
+                ),
+              ),
+            const SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const [
+        items:  [
+          //first bottom navigation button 
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
+            icon: IconButton( icon: Icon(Icons.home),onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => home_Screen(),),);
+            }),label: "Home"),
+                     
+            //second bottom navigation button         
+             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -167,7 +241,7 @@ class home_Screen extends StatelessWidget {
         elevation: 12,
         mini: true,
         child:  IconButton(
-          icon: Icon(Icons.add), onPressed: () {
+          icon: Icon(Icons.camera_alt), onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => Home(),));
           }, 
         ),
