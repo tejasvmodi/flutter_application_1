@@ -9,7 +9,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
 
 class ChatRoom extends StatelessWidget {
-  
+   
+
   final Map<String, dynamic> userMap;
   final String chatRoomId;
 
